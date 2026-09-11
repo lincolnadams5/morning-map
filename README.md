@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Morning Map
 
-## Getting Started
+Morning Map is a three-screen interactive prototype that works backward from a desired arrival time to show when to start getting ready, accounting for morning tasks and commuting.
 
-First, run the development server:
+**Live prototype:** [Add public URL]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 1. Need, persona, capability, and value
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Need:** People often underestimate how long their morning routine takes and leave too little time for their commute, leading them to rush, skip breakfast, or arrive late.
+- **Persona:** A college student who commutes to morning classes several days a week, loses track of time while getting ready, and often leaves in a rush.
+- **Capability:** Turn a class start time into a preparation schedule that accounts for their routine and commute.
+- **Value:** Control. Know how to use the morning instead of feeling like time keeps slipping away.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 2. Three screens
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The interface uses “arrival time” rather than “class start time” to accommodate other routines while keeping college students as the initial evaluation audience.
 
-## Learn More
+| Screen | Description and single job | Why it earned a slot | Design question |
+| --- | --- | --- | --- |
+| **1. Take control of your morning** | Signal the capability and value with “Take back your morning,” the affordance sentence “Turn your arrival time into a morning plan,” a visual example schedule, and “Plan my morning.” | Visitors need to understand the benefit and picture how the product works before using it. | Do the headline and visual schedule communicate the purpose and value at first glance? |
+| **2. Plan your morning** | Make preparation time visible through a question-by-question walkthrough of arrival time, commute, and tasks with durations; a live preview updates the start time within the same screen. | Users can see the calculation in action and account for tasks they might underestimate or skip. | Do users understand how their tasks and commute affect when they need to begin? |
+| **3. Your morning, mapped out** | Provide a schedule to follow, with a prominent start time, a timeline of tasks, departure and arrival, task checkboxes, and “Edit my plan.” | The completed plan turns rough estimates into concrete times and actions. | Can users quickly identify when to start and leave, and does the schedule give them a greater sense of control? |
 
-To learn more about Next.js, take a look at the following resources:
+## 3. Design question plan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+These are predictions for a later evaluation, not collected feedback or findings.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Group | Question | Predicted answer | Prototype basis |
+| --- | --- | --- | --- |
+| **Need** | Tell me about the last time you were in a rush to get to a morning class. What happened, and how did that affect your morning? | I underestimated getting-ready time, skipped breakfast or other tasks, and still left late. | Screen 2 makes preparation tasks and their durations explicit, reflecting the assumed need. |
+| **Value** | If you had more control over your time in the morning, what kind of impact could you see that making on the rest of your day? | I would start the day less stressed and feel more in control of my time. | Screen 3 provides a clear start time and an ordered schedule. |
+| **Persona** | How often do you find yourself rushing to class, and what are those mornings usually like? | Several mornings a week, especially before an early class when I need to get ready, eat breakfast, and commute. | Screen 2's task and commute inputs reflect the expected routine. |
+| **Capability** | I’ll show you this screen for five seconds, then hide it. From what you could gather, what do you think this tool could help you do? | Schedule what I need to do before leaving so I know how much time I actually have. | Screen 1 pairs the affordance sentence with a visual example schedule. |
 
-## Deploy on Vercel
+## 4. Design justification and first read
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**[To complete after deployment and review of the live prototype.]**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **First glance:** [Does the landing screen visually signal the capability and value before detailed reading? Does anything compete with the primary action?]
+- **Grouping:** [Identify which information and actions belong together on each screen and the Gestalt principles used, such as proximity, similarity, or connectedness.]
+- **Focus and navigation:** [Do screens 2 and 3 demonstrate the primary capability, and can users return home from every screen?]
+- **Revision and rationale:** [Describe what the initial AI output got wrong and what changed, naming the design question and signaling or grouping principle behind the revision.]
+- **Concrete before and after:** [Link to the initial commit or screenshot and the revised screen; explain the specific communication improvement.]
