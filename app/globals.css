@@ -60,8 +60,8 @@ body {
 .morning-map h1,.morning-map h2,.morning-map h3,.morning-map p{margin:0}
 .morning-map h1,.morning-map h2{font-weight:400}
 .morning-map h1{font-family:var(--serif);letter-spacing:-1.8px;font-size:52px;line-height:1.12}
-.morning-map button.primary{border:1px solid var(--blue);border-radius:9px;background:var(--blue);color:white;padding:16px 24px;font-weight:600;display:inline-flex;gap:32px;align-items:center;justify-content:center;min-height:54px;transition:background .15s,transform .15s}
-.morning-map button.primary:hover{background:#42647d;transform:translateY(-1px)}
+.morning-map .primary{border:1px solid var(--blue);border-radius:9px;background:var(--blue);color:white;padding:16px 24px;font-weight:600;display:inline-flex;gap:32px;align-items:center;justify-content:center;min-height:54px;transition:background .15s,transform .15s;text-decoration:none}
+.morning-map .primary:hover{background:#42647d;transform:translateY(-1px)}
 .morning-map .arrow{font-size:22px;font-weight:400;line-height:1}
 .morning-map .eyebrow{text-transform:uppercase;letter-spacing:2.1px;font-size:12px;font-weight:650}
 .morning-map .muted{color:var(--muted)}
@@ -273,7 +273,7 @@ body {
 .morning-map .hero h1 em{color:var(--blue)}
 .morning-map .hero-description{max-width:350px;font-size:22px;line-height:1.55;color:var(--ink);margin-top:27px;text-wrap:pretty}
 .morning-map .hero .primary{margin-top:30px;box-shadow:0 6px 16px rgba(52,73,102,.12)}
-.morning-map button.primary:hover{background:#193f54}
+.morning-map .primary:hover{background:#193f54}
 .morning-map .example{background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);padding:27px 26px 22px;box-shadow:0 18px 60px rgba(52,73,102,.13);backdrop-filter:blur(9px)}
 .morning-map .example-top{margin-bottom:20px}
 .morning-map .example-title{font-size:29px}
@@ -358,8 +358,8 @@ body {
 }
 .morning-map{--paper:#d8f1f8;--stone:#edf7fb;--line:#b9bdb2;--blue:#344966;--ink:#344966;--muted:#4e6078;--white:#ffffff;--sage:#7d8570;--rose:#af5b5b}
 .morning-map,.morning-map[data-screen="home"]::before{background-color:var(--paper)}
-.morning-map button.primary{background:var(--blue);border-color:var(--blue);color:var(--white)}
-.morning-map button.primary:hover{background:#293a52;border-color:#293a52}
+.morning-map .primary{background:var(--blue);border-color:var(--blue);color:var(--white)}
+.morning-map .primary:hover{background:#293a52;border-color:#293a52}
 .morning-map .hero h1 em{color:var(--rose)}
 .morning-map .example-start,.morning-map .start-card{background:var(--blue)}
 .morning-map .example-start p,.morning-map .start-card .duration-note{color:var(--paper)}

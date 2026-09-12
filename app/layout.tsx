@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Fraunces, Inter, DM_Mono } from "next/font/google"
 import "./globals.css"
+import { MorningMapProvider } from "./context/morning-map-context"
+import AppShell from "./components/AppShell"
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -19,8 +21,9 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Morning Map",
+  title: "Morning Map — Take control of your morning",
   description: "Turn your arrival time into a morning plan.",
+  icons: { icon: "/morning-map/logo.svg" },
 }
 
 export default function RootLayout({
@@ -33,7 +36,11 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${inter.variable} ${dmMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <MorningMapProvider>
+          <AppShell>{children}</AppShell>
+        </MorningMapProvider>
+      </body>
     </html>
   )
 }
