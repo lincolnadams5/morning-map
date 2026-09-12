@@ -34,10 +34,26 @@ These are predictions for a later evaluation, not collected feedback or findings
 
 ## 4. Design justification and first read
 
-**[To complete after deployment and review of the live prototype.]**
+1. Does the landing screen signal the primary capability and fundamental value at first glance, before reading?
 
-- **First glance:** [Does the landing screen visually signal the capability and value before detailed reading? Does anything compete with the primary action?]
-- **Grouping:** [Identify which information and actions belong together on each screen and the Gestalt principles used, such as proximity, similarity, or connectedness.]
-- **Focus and navigation:** [Do screens 2 and 3 demonstrate the primary capability, and can users return home from every screen?]
-- **Revision and rationale:** [Describe what the initial AI output got wrong and what changed, naming the design question and signaling or grouping principle behind the revision.]
-- **Concrete before and after:** [Link to the initial commit or screenshot and the revised screen; explain the specific communication improvement.]
+- A
+
+2. Does every element on the landing screen earn its place, or does anything compete with the primary job?
+
+- A
+
+3. What information and actions belong together on each screen, and which Gestalt grouping principle communicates that?
+
+- A
+
+4. Do screens 2 and 3 stay on mission, and can you return to the landing screen from everywhere?
+
+- A
+
+5. What did AI initially get wrong, skip, or oversimplify, and what did you change?
+
+- A
+
+6. Which design question or grouping/signaling decision motivated each important change?
+
+- A
