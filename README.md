@@ -2,7 +2,7 @@
 
 Morning Map is a three-screen interactive prototype that works backward from a desired arrival time to show when to start getting ready, accounting for morning tasks and commuting.
 
-**Live prototype:** [Add public URL]
+**Live prototype:** https://morning-map-seven.vercel.app
 
 ## 1. Need, persona, capability, and value
 
@@ -17,7 +17,7 @@ The interface uses “arrival time” rather than “class start time” to acco
 
 | Screen | Description and single job | Why it earned a slot | Design question |
 | --- | --- | --- | --- |
-| **1. Take control of your morning** | Signal the capability and value with “Take back your morning,” the affordance sentence “Turn your arrival time into a morning plan,” a visual example schedule, and “Plan my morning.” | Visitors need to understand the benefit and picture how the product works before using it. | Do the headline and visual schedule communicate the purpose and value at first glance? |
+| **1. Take control of your morning** | Signal the capability and value with “Take control of your morning,” the affordance sentence “Turn your arrival time into a morning plan,” a visual example schedule, and “Plan my morning.” | Visitors need to understand the benefit and picture how the product works before using it. | Do the headline and visual schedule communicate the purpose and value at first glance? |
 | **2. Plan your morning** | Make preparation time visible through a question-by-question walkthrough of arrival time, commute, and tasks with durations; a live preview updates the start time within the same screen. | Users can see the calculation in action and account for tasks they might underestimate or skip. | Do users understand how their tasks and commute affect when they need to begin? |
 | **3. Your morning, mapped out** | Provide a schedule to follow, with a prominent start time, a timeline of tasks, departure and arrival, task checkboxes, and “Edit my plan.” | The completed plan turns rough estimates into concrete times and actions. | Can users quickly identify when to start and leave, and does the schedule give them a greater sense of control? |
 
@@ -57,3 +57,13 @@ These are predictions for a later evaluation, not collected feedback or findings
 6. Which design question or grouping/signaling decision motivated each important change?
 
 - The Capability question (five-second test) drove the example card and later moving the start time to the card’s top-right so it reads first; the “does every element earn its place” question drove removing the second call to action; and the Screen 2 design question about seeing how tasks affect the start time drove moving the live preview beside the form so cause and effect sit together.
+
+### Before and after
+
+Landing screen, initial AI output ([commit `5e84db1`](https://github.com/lincolnadams5/morning-map/commit/5e84db1)) versus the revised screen. The first pass collapsed the routine into one “Getting ready” row and tucked the start time into a small corner label, so the card did not signal the capability. The revision lists each task on a timeline and gives the start time its own prominent box in the card’s top-right, next to the title.
+
+| Before | After |
+| --- | --- |
+| ![Landing screen, initial AI output](screenshots/before-home.png) | ![Landing screen, revised](screenshots/after-home.png) |
+
+Plan and schedule screens are in [`screenshots/`](screenshots/) as `before-*.png` and `after-*.png`.
