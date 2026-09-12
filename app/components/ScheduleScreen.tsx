@@ -28,7 +28,7 @@ export default function ScheduleScreen() {
 
   return (
     <>
-      <div className="page-heading schedule-top"><div><p className="eyebrow">A little more control, from the start</p><h1>Your morning, mapped out</h1><p>One thing at a time. Check off each task as you go.</p></div><button className="secondary" onClick={() => { setStep(2); router.push('/plan'); }}>Edit my plan</button></div>
+      <div className="page-heading"><div><p className="eyebrow">A little more control, from the start</p><h1>Your morning, mapped out</h1><p className="lede">One thing at a time. Check off each task as you go.</p></div><button className="secondary" onClick={() => { setStep(2); router.push('/plan'); }}>Edit my plan</button></div>
       <div className="schedule-layout"><aside className="start-card"><p className="eyebrow">Start your morning at</p><div className="big-time"><Time minutes={plan.start} /></div><div className="leave"><p>Leave at</p><strong><Time minutes={plan.leave} /></strong></div><p className="duration-note">{duration(plan.preparation)} to prepare · {duration(plan.commute)} to travel</p></aside>
         <section aria-label="Your morning timeline"><ol className="schedule-list">
           {timeline.map(task => <li className={`schedule-row ${done.has(task.id) ? 'done' : ''}`} key={task.id}>

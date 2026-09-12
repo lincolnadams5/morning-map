@@ -28,16 +28,7 @@ export default function PlanScreen() {
 
   return (
     <>
-      <div className="planner-heading"><h1>Plan your morning</h1>
-        <aside className="preview" aria-label="Live morning plan">
-          <div className="preview-start"><span>Start at</span><div className="preview-time" role="status" aria-live="polite" aria-atomic="true">{valid ? <Time minutes={plan.start} /> : '—'}</div></div>
-          <div className="calc">{valid ? <>
-            <div className="calc-row"><span>Preparation</span><strong>{duration(plan.preparation)}</strong></div>
-            <div className="calc-row"><span>Commute</span><strong>{duration(plan.commute)}</strong></div>
-            <div className="calc-row calc-total"><span>Total</span><strong>{duration(plan.total)}</strong></div>
-          </> : <p className="helper">Check your time and durations.</p>}</div>
-        </aside>
-      </div>
+      <div className="page-heading"><div><p className="eyebrow">Work backward from your arrival</p><h1>Plan your morning</h1><p className="lede">Answer three questions and watch your start time update as you go.</p></div></div>
       <div className="planner"><section className="walkthrough">
         <nav className="steps" aria-label="Planning questions">{['Arrival', 'Commute', 'Routine'].map((label, index) => <span className="step-item" key={label}>
           {index > 0 && <span className="step-line" aria-hidden="true" />}
@@ -47,7 +38,7 @@ export default function PlanScreen() {
           {step === 0 && <><h2><label htmlFor="arrival">When do you need to arrive?</label></h2><input className="large-input" id="arrival" type="time" required value={arrival} onChange={event => { setArrival(event.target.value); setError(''); }} /></>}
           {step === 1 && <><h2><label htmlFor="commute">How long is your commute?</label></h2><div className="input-unit"><input className="large-input" id="commute" type="number" min="0" max="720" step="1" required inputMode="numeric" value={commute} onChange={event => { setCommute(event.target.value); setError(''); }} /><span>minutes</span></div><p className="helper">Include walking, parking, and waiting.</p></>}
           {step === 2 && <>
-            <h2>What’s in your morning?</h2><p>Choose tasks and adjust the minutes.</p>
+            <h2>What’s in your morning?</h2><p className="lede">Choose tasks and adjust the minutes.</p>
             <div className="task-list">{tasks.map(task => <div className={`task-edit ${task.selected ? '' : 'off'}`} key={task.id}>
               <input type="checkbox" id={`select-${task.id}`} checked={task.selected} onChange={event => updateTask(task.id, { selected: event.target.checked })} />
               <label className="task-name" htmlFor={`select-${task.id}`}><TaskIcon name={task.name} /><span>{task.name}</span></label>
@@ -64,7 +55,17 @@ export default function PlanScreen() {
         <div className="walk-nav"><button className="text-button" onClick={() => { setError(''); if (step === 0) router.push('/'); else setStep(step - 1); }}>{step === 0 ? 'Back to home' : '← Back'}</button>
           <button className="primary" onClick={() => { if (validate()) { if (step < 2) setStep(step + 1); else router.push('/schedule'); } }}>{step === 2 ? 'See my morning' : 'Continue'} <span className="arrow" aria-hidden="true">→</span></button>
         </div>
-      </section></div>
+      </section>
+        <aside className="preview" aria-label="Live morning plan">
+          <p className="eyebrow">Live preview</p>
+          <div className="preview-start"><span>Start your morning at</span><div className="preview-time" role="status" aria-live="polite" aria-atomic="true">{valid ? <Time minutes={plan.start} /> : '—'}</div></div>
+          <div className="calc">{valid ? <>
+            <div className="calc-row"><span>Preparation</span><strong>{duration(plan.preparation)}</strong></div>
+            <div className="calc-row"><span>Commute</span><strong>{duration(plan.commute)}</strong></div>
+            <div className="calc-row calc-total"><span>Total</span><strong>{duration(plan.total)}</strong></div>
+          </> : <p className="helper">Check your time and durations.</p>}</div>
+        </aside>
+      </div>
     </>
   );
 }
