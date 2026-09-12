@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import TaskIcon from './TaskIcon';
-import PlanCta from './PlanCta';
 
 const sample = [
   { time: '7:45 AM', name: 'Shower', detail: '15 min' },
@@ -20,11 +19,12 @@ export default function HomeScreen() {
         <Link className="primary" href="/plan">Plan my morning <span className="arrow" aria-hidden="true">↗</span></Link>
       </div></section>
       <section className="example" aria-label="Example morning schedule">
-        <div className="example-top"><span className="example-title">Your plan</span><span className="pill">Example for a 9:00 AM arrival</span></div>
-        <div className="example-start"><div><p>Your morning starts at</p><div className="time">7:45 <small>AM</small></div></div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="24" cy="24" r="18" /><path d="M24 12v13l8 5M24 6v3M42 24h-3M24 42v-3M6 24h3" /></svg></div>
+        <div className="example-top">
+          <div className="example-heading"><span className="example-title">Your plan</span><span className="pill">Example for a 9:00 AM arrival</span></div>
+          <div className="example-start"><div><p>Your morning starts at</p><div className="time">7:45 <small>AM</small></div></div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="24" cy="24" r="18" /><path d="M24 12v13l8 5M24 6v3M42 24h-3M24 42v-3M6 24h3" /></svg></div>
+        </div>
         <div className="mini-timeline">{sample.map(item => <div className="mini-row" key={item.name}><time>{item.time}</time><i className="mini-dot" /><div><strong><TaskIcon name={item.name} /><span>{item.name}</span></strong>{item.detail && <small>{item.detail}</small>}</div></div>)}</div>
       </section>
-      <PlanCta />
     </>
   );
 }

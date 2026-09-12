@@ -36,24 +36,24 @@ These are predictions for a later evaluation, not collected feedback or findings
 
 1. Does the landing screen signal the primary capability and fundamental value at first glance, before reading?
 
-- A
+- Yes. The headline “Take control of your morning” names the value, and the example schedule card beside it—“Your morning starts at 7:45 AM” above a timeline of tasks—shows the capability before any text is read.
 
 2. Does every element on the landing screen earn its place, or does anything compete with the primary job?
 
-- A
+- After trimming, the screen holds only the headline, one affordance sentence, one "Plan my morning" button, and the example card. There was a duplicate call to action beneath the card that was removed because it competed with the primary button and added scroll without new information.
 
 3. What information and actions belong together on each screen, and which Gestalt grouping principle communicates that?
 
-- A
+- Screen 1 groups the start time with its timeline inside a single card (common region), Screen 2 groups each task with its checkbox and minutes on one row (proximity) and keeps the live preview in a separate sidebar, and Screen 3 aligns times and task names in columns (alignment/continuity) so the schedule reads as one sequence.
 
 4. Do screens 2 and 3 stay on mission, and can you return to the landing screen from everywhere?
 
-- A
+- Screen 2 asks only the three inputs the calculation needs, and Screen 3 shows only the resulting schedule plus “Edit my plan.” The header logo and a “Home” link appear on every inner screen, and Screen 2’s first step also offers “Back to home.”
 
 5. What did AI initially get wrong, skip, or oversimplify, and what did you change?
 
-- A
+- The first pass hid the start time in a corner label, lumped the routine into one “Getting ready” row, let the preview card overpower the plan question, and styled leave/arrive like checkable tasks. I made the start time prominent, listed individual tasks, moved the preview to a sidebar, and visually separated tasks from fixed milestones.
 
 6. Which design question or grouping/signaling decision motivated each important change?
 
-- A
+- The Capability question (five-second test) drove the example card and later moving the start time to the card’s top-right so it reads first; the “does every element earn its place” question drove removing the second call to action; and the Screen 2 design question about seeing how tasks affect the start time drove moving the live preview beside the form so cause and effect sit together.
